@@ -1,3 +1,8 @@
+# version 0.0.31
+  - Fixed the assertor mod exports bug
+  - Done the following TODO tasks:
+    * Quitar "index" do module.exports, convertila en variable local do modulo
+
 # version 0.0.3
   - now this module is not backwards compatible
   - now this module only exports the following functions:

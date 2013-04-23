@@ -1,6 +1,9 @@
 {
   "name": "iai-util",
   "description": "An API to share utilities. Allows loading some predefined functions or registering new ones.",
-  "version": "0.0.3",
-  "main" : "utils.js"
+  "version": "0.0.31",
+  "main" : "index.js",
+  "repository": {
+    "type": "git", "url": "https://github.com/laconbass/iai-util.git"
+  }
 }
