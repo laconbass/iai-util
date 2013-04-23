@@ -1,6 +1,6 @@
 {
   "name": "iai-util",
-  "description": "a bunch of function utils for iai",
+  "description": "An API to share utilities. Allows loading some predefined functions or registering new ones.",
   "version": "0.0.2",
-  "main" : "iai-util.js"
+  "main" : "utils.js"
 }
