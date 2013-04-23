@@ -1,0 +1,6 @@
+{
+  "name": "iai-util",
+  "description": "a bunch of function utils for iai",
+  "version": "0.0.2",
+  "main" : "iai-util.js"
+}

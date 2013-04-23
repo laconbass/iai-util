@@ -1,0 +1,9 @@
+version 0.0.3
+  - now this module is not backwards compatible
+  - removed the following functions
+    
+
+version 0.0.2
+  - started the CHANGELOG
+  - now the sequence function receives context as 1st parameter
+  - all other functions must be revised and may change with non-backards compatibility
