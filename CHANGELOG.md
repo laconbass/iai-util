@@ -1,3 +1,26 @@
+# version 0.0.4
+  - Now the module main file is "lib/iu.js"
+  - Added the following components:
+    * "async utils": provides utilites to deal with common async tasks
+  - Added the "IaiComponent" class, see the README file for more info
+  - Now the "assertor" util...
+    * returns a chainable API to allow cleaner code flow
+    * added "Assertor.setName"
+    * added "Assertor.expects"
+    * added "Assertor.throws"
+    * added "Assertor.runs"
+  - Fixed a bug on "ANSI style" mod
+  - Added the following typechecks short aliases for ease:
+    * 'iu.isFn' => 'iu.isFunction'
+  - Added the following typechecks as aliases for node core "util" module for ease:
+    * 'isArray'
+    * 'isDate'
+    * 'isRegExp'
+  - Modified the logic of the "style" function, now acepts "util.format" strings
+  - Added "style.clean"
+  - Added "isNumber"
+  - Added lots of test cases, specially for "isNumber" function
+
 # version 0.0.31
   - Fixed the assertor mod exports bug
   - Done the following TODO tasks:
