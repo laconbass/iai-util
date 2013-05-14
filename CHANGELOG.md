@@ -1,3 +1,16 @@
+# version 0.0.5
+  - Now the module is a iai component.
+    * The module depends on "iai-component 0.0.1"
+    * The module exports a iaiComponent instance
+    * Added iai component information on package.json
+  - Now the assertor throws errors only with the portion of stacktrace need to debug it
+  - Added a typecheck: "isChildOf"
+  - Renamed "ANSI style" to "ANSI styler"
+  - added "Assertor.each"
+  - added the following sub-components:
+    * "hash utils"
+    * "tag format"
+
 # version 0.0.4
   - Now the module main file is "lib/iu.js"
   - Added the following components:

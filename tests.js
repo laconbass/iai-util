@@ -6,14 +6,14 @@
 
 process.env.NODE_ENV = 'test';
 
-var iu = require('./')
-  .load( 'type checks' )
-  .load( 'assertor' )
-  .load( 'array utils' )
-  .load( 'ANSI styles' )
-  .load( 'async utils' )
-  .register( 'isCacadevaca', function(o){ return o.isCaca(); })
-;
+require('./');
+
+console.assert( !!global['iu'], 'expecting iu to be global' );
+
+iu.load('assertor');
+
+console.assert( typeof iu.assertor == 'function', 'expecting iu.assertor to be a function' );
+
 
 iu.assertor( 'Assertor tester' )
   .expects( 'true to be true', true )
@@ -36,13 +36,9 @@ iu.assertor( 'Assertor tester' )
   })
 ;
 
-/*console.log( require('util').inspect(
-  //* * *
-  iu.style.clean( iu.style( ['cyan', 'bold', 'italic'], 'algo' ) )
-  //* * *
-) );//*/
 
 iu.assertor( 'Style tester' )
+  .runs( 'iu.load "ANSI styler"', function(){ iu.load('ANSI styler') } )
   .expects( 'a bold ANSI string', iu.style( 'bold', '' ) === '\u001b[1m\u001b[22m' )
   .expects( 'a italic ANSI string', iu.style( 'italic', '' ) === '\u001b[3m\u001b[23m' )
   .expects( 'a underline ANSI string',
@@ -60,6 +56,11 @@ iu.assertor( 'Style tester' )
   .expects( 'a cleaned string',
             iu.style.clean( iu.style( ['cyan', 'bold', 'italic'], '' ) ) === '' )
 
+;
+
+
+iu.assertor( 'type checks tester' )
+  .runs( 'iu.load "type checks"', function(){ iu.load( 'type checks' ) } )
 ;
 
 var isNumber = iu.isNumber;
@@ -107,10 +108,21 @@ iu.assertor( 'isNumber')
   .expects( "Instance of a function", ! isNumber(function(){}) )
 ;
 
-iu.assertor( 'iu.sequence' )
+iu.assertor( 'hash utils' )
+  .runs( 'iu.load "hash utils"', function(){ iu.load( 'hash utils' ) } )
+  .expects( 'extend to be a function', iu.isFn( iu.extend ) )
+  // TODO extend tests
+  .expects( 'locals to be a function', iu.isFn( iu.locals ) )
+  .expects( 'locals to return a function', iu.isFn( iu.locals() ) )
+;
+
+
+iu.assertor( 'Async utils tester' )
+  .runs( 'iu.load "async utils"', function(){ iu.load('async utils') } )
   .runs( 'sequence on [1, 2, 3]', function(done){
     iu.sequence([1, 2, 3], function(key, val, next){
       console.assert(parseInt(key)+1 == val);
       next();
     }, done);
   } )
+;
