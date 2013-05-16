@@ -15,10 +15,11 @@
       "type checks": "./typecheck",
       "hash utils": "./hash",
       "array utils": "./array",
-      "tag format": "./format",
+      "string utils": "./format",
       "async utils": "./sequence",
       "ANSI styler": "./style",
-      "assertor": "./assertor"
+      "ansi": "./ansi-sequencer",
+      "assertor": "./Assertor"
     }
   }
 }

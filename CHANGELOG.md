@@ -9,7 +9,8 @@
   - added "Assertor.each"
   - added the following sub-components:
     * "hash utils"
-    * "tag format"
+    * "string utils"
+    * "ansi"
 
 # version 0.0.4
   - Now the module main file is "lib/iu.js"
