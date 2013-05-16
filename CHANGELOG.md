@@ -11,6 +11,7 @@
     * "hash utils"
     * "string utils"
     * "ansi"
+  - Now the assertor informs about the error thrown on a "throws" block if the error type is not met.
 
 # version 0.0.4
   - Now the module main file is "lib/iu.js"
