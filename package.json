@@ -1,25 +1,14 @@
 {
   "name": "iai-util",
-  "description": "An API to share utilities. Allows loading some predefined functions or registering new ones.",
-  "version": "0.0.5",
-  "main" : "lib/iu.js",
+  "description": "",
+  "version": "1.0.0-alpha",
+  "main": "lib/iu.js",
   "repository": {
-    "type": "git", "url": "https://github.com/laconbass/iai-util.git"
+    "type": "git",
+    "url": "https://github.com/laconbass/iai-util.git"
   },
-  "dependencies": {
-    "iai-component": ">= 0.0.1"
-  },
-  "iai-info": {
-    "scope": "iu",
-    "aliases": {
-      "type checks": "./typecheck",
-      "hash utils": "./hash",
-      "array utils": "./array",
-      "string utils": "./format",
-      "async utils": "./sequence",
-      "ANSI styler": "./style",
-      "ansi": "./ansi-sequencer",
-      "assertor": "./Assertor"
-    }
+  "devDependencies": {
+    "chai": "~1.8.1",
+    "mocha": "~1.13.0"
   }
 }
